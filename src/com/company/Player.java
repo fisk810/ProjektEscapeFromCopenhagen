@@ -1,5 +1,4 @@
 package com.company;
-
 import java.util.Random;
 
 public class Player {
@@ -9,8 +8,7 @@ public class Player {
     private int playerAttackMin;
     private int playerAttackMax;
 
-
-    private Utilities mp7A2 = new Utilities(14, 28, 3);
+    private Utilities mp7A2 = new Utilities(14, 25, 3);
     private Utilities coltM10 = new Utilities(21, 39, 0);
     private Utilities handgrenade = new Utilities(0);
     private Utilities healingKit = new Utilities(0, 1);
@@ -23,15 +21,10 @@ public class Player {
         this.playerAttackMax = playerAttackMax;
     }
 
-    public Player(Utilities mp7A2) {
-        this.mp7A2 = mp7A2;
-    }
-
     //Getters and setters
     public int getPlayerHP() {
         return playerHP;
     }
-
     public void setPlayerHP(int playerHP) {
         this.playerHP = playerHP;
     }

@@ -14,7 +14,7 @@ public class Utilities {
     private int handgrenadeAmount = 0;
 
 
-    //Default constructor
+    //Default Constructor
     public Utilities() {
     }
 
@@ -25,7 +25,6 @@ public class Utilities {
 
     //Weapon Constructor
     public Utilities(int weaponDamageMin, int weaponDamageMax, int mag) {
-
         this.weaponDamageMin = weaponDamageMin;
         this.weaponDamageMax = weaponDamageMax;
         this.mag = mag;
@@ -42,7 +41,6 @@ public class Utilities {
         if (getFirstAidAmount() >= 1) {
             player.setPlayerHP(player.getPlayerHP() + 65);
             System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  " + player.getPlayerName() + " healed for: 65");
-
             setFirstAidAmount(getFirstAidAmount() - 1);
         } else {
             System.out.println("You don't have a first aid kit!");
@@ -62,8 +60,6 @@ public class Utilities {
 
 
     //Getters and setters
-
-
     public int getFirstAidAmount() {
         return firstAidAmount;
     }
