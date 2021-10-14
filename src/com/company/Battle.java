@@ -11,7 +11,6 @@ public class Battle {
 
     private Enemy enemy;
     private Player player;
-    private Utilities utilities;
 
     //Constructor
     public Battle(Enemy enemy, Player player) {
@@ -20,6 +19,7 @@ public class Battle {
     }
 
     //Methods
+    //PlayerTurn allows the player to use attacks via a switch
     public void playerTurn(Enemy enemy, Player player) {
         Random randomRage = new Random();
 
@@ -50,7 +50,7 @@ public class Battle {
                     //Axe 5-25 damage
                     int enemyHPPlaceholder = enemy.getEnemyHP();
                     enemy.setEnemyHP(enemy.getEnemyHP() - player.getPlayerAttack());
-
+                    //If the player manages to crit, the enemy gets more rage.
                     if ((enemyHPPlaceholder - enemy.getEnemyHP()) > player.getplayerAttackMax()) {
                         enemy.setEnemyRage(enemy.getEnemyRage() + randomRage.nextInt(11 + 1));
                     }else{
@@ -62,20 +62,19 @@ public class Battle {
                     //Colt M10 21-39 damage
                     int enemyHPPlaceholder = enemy.getEnemyHP();
                     enemy.setEnemyHP(enemy.getEnemyHP() - player.getPlayerAttackWeapon(player.getColtM10()));
-
+                    //If the player manages to crit, the enemy gets more rage.
                     if ((enemyHPPlaceholder - enemy.getEnemyHP()) > player.getColtM10().getWeaponDamageMax()) {
                         enemy.setEnemyRage(enemy.getEnemyRage() + randomRage.nextInt(16 + 1));
                     }else{
                         enemy.setEnemyRage(enemy.getEnemyRage() + randomRage.nextInt(9 + 1));
                     }
                     playerActive = false;
-
                 }
                 case "3" -> {
                     //MP7A2 14-25 damage
                     int enemyHPPlaceholder = enemy.getEnemyHP();
                     enemy.setEnemyHP(enemy.getEnemyHP() - player.getPlayerAttackWeapon(player.getMp7A2()));
-
+                    //If the player manages to crit, the enemy gets more rage.
                     if ((enemyHPPlaceholder - enemy.getEnemyHP()) > player.getMp7A2().getWeaponDamageMax()) {
                         enemy.setEnemyRage(enemy.getEnemyRage() + randomRage.nextInt(21 + 1));
                     }else{
@@ -121,16 +120,16 @@ public class Battle {
         player.getHealingKit().setAdrenalineSyringeAmount(player.getHealingKit().getAdrenalineSyringeAmount() + enemy.getSyringeAmount());
     }
 
-    /* Et while loop som styrer, om det er spiller eller fjendens tur. Loopet stopper når spillerens,
-    eller fjendens liv rammer 0 eller mindre
-    */
+    //This methods controls the battles turns
     public void turnController(Enemy enemy, Player player) {
+        //A while loop that controls whether it is the player or the enemy's turn. The loop stops once the player or the enemy's health
+        //reaches 0
         while (enemy.getEnemyHP() > 0 && player.getPlayerHP() > 0) {
 
             playerTurn(enemy, player);
 
-            System.out.println(
-                    "███████╗███╗   ██╗███████╗███╗   ███╗██╗   ██╗" + "  ::::::::                           \n" +
+            System.out.println(""+
+                            "███████╗███╗   ██╗███████╗███╗   ███╗██╗   ██╗" + "  ::::::::                           \n" +
                             "██╔════╝████╗  ██║██╔════╝████╗ ████║╚██╗ ██╔╝" + "  :: Name: " + enemy.getEnemyName() + "  \n" +
                             "█████╗  ██╔██╗ ██║█████╗  ██╔████╔██║ ╚████╔╝ " + "  ::   HP: " + enemy.getEnemyHP() + "    \n" +
                             "██╔══╝  ██║╚██╗██║██╔══╝  ██║╚██╔╝██║  ╚██╔╝  " + "  :: RAGE: " + enemy.getEnemyRage() + "  \n" +
@@ -139,8 +138,8 @@ public class Battle {
             if (enemy.getEnemyHP() > 0) {
                 System.out.println(enemy.getEnemyName() + " just attacked you!");
                 player.setPlayerHP(player.getPlayerHP() - enemy.getEnemyATK());
-                System.out.println(
-                        "██╗   ██╗ ██████╗ ██╗   ██╗" + "  ::::::::                                \n" +
+                System.out.println(""+
+                                "██╗   ██╗ ██████╗ ██╗   ██╗" + "  ::::::::                                \n" +
                                 "╚██╗ ██╔╝██╔═══██╗██║   ██║" + "  :: Name: " + player.getPlayerName() + " \n" +
                                 " ╚████╔╝ ██║   ██║██║   ██║" + "  ::   HP: " + player.getPlayerHP() + "   \n" +
                                 "  ╚██╔╝  ██║   ██║██║   ██║" + "  ::::::::                                \n" +
@@ -148,6 +147,7 @@ public class Battle {
             }
             playerActive = true;
         }
+        //if either the enemy or the player reaches 0 health turnController ends
         if (player.getPlayerHP() > 0 && enemy.getEnemyHP() <= 0) {
             System.out.println(enemy.getEnemyName() + ": " + enemy.getRandomDeathShouts());
             System.out.println("\nThe enemy has been defeated!");

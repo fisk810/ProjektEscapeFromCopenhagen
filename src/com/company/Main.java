@@ -6,7 +6,6 @@ public class Main {
 
         //Escape from Copenhagen
         //Game
-
         Controller controller = new Controller();
         controller.start();
 

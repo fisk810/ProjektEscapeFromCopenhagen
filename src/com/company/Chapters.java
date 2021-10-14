@@ -2,16 +2,18 @@ package com.company;
 import java.util.Scanner;
 
 public class Chapters {
-
+    //Creating a player, a controller and a scanner
     Scanner input = new Scanner(System.in);
-    Player player = new Player("", 100, 5, 15);
+    Player player = new Player("", 100, 5, 25);
     Controller controller = new Controller();
 
     //Created arrays with shouts for the enemy to use
     String[] infectedShouts = {"GRRR...", "ARGHHH..."};
     String[] deathShouts = {"gurghh...", "urghh..."};
-    String[] bossShouts = {"", ""};
+    String[] boss1Shouts = {"METTE PAN!!!", "I HATE CODESMELL!!!","MARKDOWNS FOR FUCK SAKE!!!"};
+    String[] boss2Shouts = {"MY BOAT!!!", "NOKIA USED TO BE COOL!!!", "IT MILLIARDÆRER!!!"};
 
+    //playerCreation allows the user to enter a name for the player object
     public String playerCreation() {
         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n" + "What's your name? (Type your player name and press 'Enter')\n");
         String playerName = input.nextLine();
@@ -26,31 +28,49 @@ public class Chapters {
                         "    /    \\__/    \\\n" +
                         "   /              \\\n" +
                         "  /\\_/|        |\\_ \\\n" +
-                        " / /  |        |  \\ \\\n");
+                        " / /  |        |  \\ \\");
 
         System.out.println("Hello " + playerName + "!");
         return playerName;
     }
 
+    //Chapter 1 starts here
     public void chapter_1(){
         Enemy firstEnemy = new Enemy("Infected",50, 0, 5, 11, infectedShouts, deathShouts,2, 0, 1, 1,0);
         Enemy secondEnemy = new Enemy("Infected",80,15,13, 15, infectedShouts, deathShouts, 0, 0,1,0,0);
         Battle fight = new Battle(firstEnemy, player);
 
-        System.out.println(
-                "██████╗ ███████╗ ██████╗███████╗███╗   ███╗██████╗ ███████╗██████╗      ██╗██████╗ ████████╗██╗  ██╗    ██████╗  ██████╗ ██████╗  ██╗\n" +
+        System.out.println(""+
+                "███████╗███████╗ ██████╗ █████╗ ██████╗ ███████╗                                      \n" +
+                "██╔════╝██╔════╝██╔════╝██╔══██╗██╔══██╗██╔════╝                                      \n" +
+                "█████╗  ███████╗██║     ███████║██████╔╝█████╗                                        \n" +
+                "██╔══╝  ╚════██║██║     ██╔══██║██╔═══╝ ██╔══╝                                        \n" +
+                "███████╗███████║╚██████╗██║  ██║██║     ███████╗                                      \n" +
+                "╚══════╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝     ╚══════╝                                      \n" +
+                "                                                                                      \n" +
+                "███████╗██████╗  ██████╗ ███╗   ███╗                                                  \n" +
+                "██╔════╝██╔══██╗██╔═══██╗████╗ ████║                                                  \n" +
+                "█████╗  ██████╔╝██║   ██║██╔████╔██║                                                  \n" +
+                "██╔══╝  ██╔══██╗██║   ██║██║╚██╔╝██║                                                  \n" +
+                "██║     ██║  ██║╚██████╔╝██║ ╚═╝ ██║                                                  \n" +
+                "╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝                                                  \n" +
+                "                                                                                      \n" +
+                " ██████╗ ██████╗ ██████╗ ███████╗███╗   ██╗██╗  ██╗ █████╗  ██████╗ ███████╗███╗   ██╗\n" +
+                "██╔════╝██╔═══██╗██╔══██╗██╔════╝████╗  ██║██║  ██║██╔══██╗██╔════╝ ██╔════╝████╗  ██║\n" +
+                "██║     ██║   ██║██████╔╝█████╗  ██╔██╗ ██║███████║███████║██║  ███╗█████╗  ██╔██╗ ██║\n" +
+                "██║     ██║   ██║██╔═══╝ ██╔══╝  ██║╚██╗██║██╔══██║██╔══██║██║   ██║██╔══╝  ██║╚██╗██║\n" +
+                "╚██████╗╚██████╔╝██║     ███████╗██║ ╚████║██║  ██║██║  ██║╚██████╔╝███████╗██║ ╚████║\n" +
+                " ╚═════╝ ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝");
+        System.out.println("Press any button to continue.");
+        input.nextLine();
+
+        System.out.println(""+
+                        "██████╗ ███████╗ ██████╗███████╗███╗   ███╗██████╗ ███████╗██████╗      ██╗██████╗ ████████╗██╗  ██╗    ██████╗  ██████╗ ██████╗  ██╗\n" +
                         "██╔══██╗██╔════╝██╔════╝██╔════╝████╗ ████║██╔══██╗██╔════╝██╔══██╗    ███║╚════██╗╚══██╔══╝██║  ██║    ╚════██╗██╔═████╗╚════██╗███║\n" +
                         "██║  ██║█████╗  ██║     █████╗  ██╔████╔██║██████╔╝█████╗  ██████╔╝    ╚██║ █████╔╝   ██║   ███████║     █████╔╝██║██╔██║ █████╔╝╚██║\n" +
                         "██║  ██║██╔══╝  ██║     ██╔══╝  ██║╚██╔╝██║██╔══██╗██╔══╝  ██╔══██╗     ██║██╔═══╝    ██║   ██╔══██║    ██╔═══╝ ████╔╝██║██╔═══╝  ██║\n" +
                         "██████╔╝███████╗╚██████╗███████╗██║ ╚═╝ ██║██████╔╝███████╗██║  ██║     ██║███████╗   ██║   ██║  ██║    ███████╗╚██████╔╝███████╗ ██║\n" +
                         "╚═════╝ ╚══════╝ ╚═════╝╚══════╝╚═╝     ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝     ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝    ╚══════╝ ╚═════╝ ╚══════╝ ╚═╝");
-
-        System.out.println("\n" +
-                "██████ ███████╗██████╗█████╗██████╗███████╗   ██████╗██████╗██████╗██████████╗   ████╗  ██╗█████╗ ██████╗██████████╗   ██╗\n" +
-                "██╔════██╔════██╔════██╔══████╔═█████╔════╝  ██╔════██╔═══████╔══████╔════████╗  ████║  ████╔══████╔════╝██╔════████╗  ██║\n" +
-                "█████╗ ██████ ██║    █████████████╔█████╗    ██║    ██║   ████████╔█████╗ ██╔██╗ ██████████████████║  ████████╗ ██╔██╗ ██║\n" +
-                "██╔══╝ ╚════█ ██║    ██╔══████╔═══╝██╔══╝    ██║    ██║   ████╔═══╝██╔══╝ ██║╚██╗████╔══████╔══████║   ████╔══╝ ██║╚██╗██║\n" +
-                "██████ ███████╚████████║  ████║    ███████╗  ╚██████╚██████╔██║    █████████║ ╚██████║  ████║  ██╚██████╔█████████║ ╚████║");
         System.out.println("Press any button to continue.");
         input.nextLine();
 
@@ -112,19 +132,21 @@ public class Chapters {
         System.out.println("\nPress any button to continue.");
         input.nextLine();
 
-        System.out.println("You stand up and go pick up your backpack”.\n" +
-                "“Then you go to your locker and pick up your weapons”.\n" +
-                "“You now have a Heckler Koch MP7A2 PDW”.\n" +
-                "“Firing at an insane 950 rounds per minute, and with effective kill-range around 200 meters out, the 9mm cartridge will do the neat trick of stopping any of the infected lifeforms outside of your safehouse”.\n" +
-                "“Weighing just over 2 kilos, loaded, your weapon is fast, but only carries 20 rounds in your standard magazine. But with the stock folded out, it’s fairly accurate within its killzone. " +
-                "\nUse ammo wisely, and this weapon will keep you alive”.\n" +
-                "“If only you had a good sight on it”.\n" +
-                "“You should be on the lookout for a proper sight, like the tritium-illuminated night sight”.\n" +
+        System.out.println("You stand up and go pick up your backpack.\n" +
+                "Then you go to your locker and pick up your weapons.\n" +
+                "You now have a Heckler Koch MP7A2 PDW.\n" +
+                "Firing at an insane 950 rounds per minute, and with effective kill-range around 200 meters out," +
+                "\nthe 9mm cartridge will do the neat trick of stopping any of the infected lifeforms outside of your safehouse.\n" +
+                "Weighing just over 2 kilos, loaded, your weapon is fast, but only carries 20 rounds in your standard magazine." +
+                "\nBut with the stock folded out, it’s fairly accurate within its killzone. " +
+                "\nUse ammo wisely, and this weapon will keep you alive.\n" +
+                "If only you had a good sight on it.\n" +
+                "You should be on the lookout for a proper sight, like the tritium-illuminated night sight.\n" +
                 "\n" +
                 "You also pick up a hefty little handaxe, great for hacking stuff to pieces.\n" +
                 "You go look out the window.\n" +
                 "\n" +
-                "“You are looking down the street on Rosenvængets Hovedvej.");
+                "You are looking down the street on Rosenvængets Hovedvej.");
         System.out.println("\nPress any button to continue.");
         input.nextLine();
 
@@ -208,12 +230,14 @@ public class Chapters {
         //First fight
         fight.turnController(firstEnemy, player);
 
-        System.out.println("Next fight:\n" + "You notice a good old HE handgrenade, hanging from the belt of the infected, you just killed. You pick it up."); //TODO overgang er lidt mærkelig her. Måske mere tekst inden næste kamp?
+        System.out.println("Next fight:\n" + "You notice a good old HE handgrenade, hanging from the belt of the infected, you just killed. You pick it up.");
 
         //Second fight
         fight.turnController(secondEnemy, player);
-        System.out.println("As you look upon the now eviscerated infected person, you see that unexpectedly this specimen also carries a HE handgrenade, only in its pocket.\n" + //TODO Stemmer ikke overens med player reward. Player får 1x granat og 2 skud til MP
-                "You pick it up, saving it for later use.\n");
+        System.out.println("As you look upon the now eviscerated infected person, you see that unexpectedly this specimen also carries a HE handgrenade, only in its pocket.\n" +
+                "You pick it up, saving it for later use.");
+        System.out.println("\nPress any button to continue.");
+        input.nextLine();
 
         System.out.println(
                 "███████╗██╗██████╗ ███████╗████████╗     ██████╗██╗  ██╗ █████╗ ██████╗ ████████╗███████╗██████╗ \n" +
@@ -233,6 +257,8 @@ public class Chapters {
         input.nextLine();
 
     }
+
+    //Chapter 2 starts here
     public void chapter_2() {
         Enemy horde = new Enemy("The Horde", 99, 0, 1000, 1001, infectedShouts,deathShouts,0 ,0 ,0 ,0 ,0);
 
@@ -254,7 +280,7 @@ public class Chapters {
         input.nextLine();
 
         System.out.println("A heartcurling roar snaps you to attention, and you are acutely aware of just how exposed you are on a large street," +
-                "\n with nowhere to go but forwards, as the resounding howls come from down towards Nordre Frihavnsgade.");
+                "\nwith nowhere to go but forwards, as the resounding howls come from down towards Nordre Frihavnsgade.");
         System.out.println("\nPress any button to continue.");
         input.nextLine();
 
@@ -267,7 +293,7 @@ public class Chapters {
         System.out.println("You race your newfound bike around the bend, onto Østbanegade, spotting the walking-bridge around 50 meters ahead.\n" +
                 "You also spot something else.\n" +
                 "Ahead of you, the whole street is filled with infected," +
-                "\n massing about, heads snapping to attention, as they notice the squeaking of your bikes gears.");
+                "\nmassing about, heads snapping to attention, as they notice the squeaking of your bikes gears.");
         System.out.println("\nPress any button to continue.");
         input.nextLine();
 
@@ -277,12 +303,12 @@ public class Chapters {
         input.nextLine();
 
         System.out.println("You - pedalling for your life - grab a grenade, and pull the pin with your teeth, splitting your lip in the process.\n" +
-                "You drop the grenade softly onto the concrete of the bridge - lettin it roll after you - counting the seconds before detonation."); //TODO der mangler noget tekst/historie før kampen
+                "You drop the grenade softly onto the concrete of the bridge - lettin it roll after you - counting the seconds before detonation.");
         System.out.println("\nPress any button to continue.");
         input.nextLine();
 
         //Third fight
-        fight.turnController(horde, player); //TODO Granat er allerede gået af her. Tekst nedenunder stemmer ikke overens.
+        fight.turnController(horde, player);
 
         System.out.println("One...");
         System.out.println("\nPress any button to continue.");
@@ -333,12 +359,12 @@ public class Chapters {
 
         System.out.println("The events of the day has taken a toll on you, and you find yourself exhausted.\n" +
                 "You can seal yourself inside the armory as protection against the infected, although it ain't exactly the most comfortable bedding," +
-                "\n old MRE-boxes or ammo crates.");
+                "\nold MRE-boxes or ammo crates.");
         System.out.println("\nPress any button to continue.");
         input.nextLine();
 
         System.out.println("Succumbing to sleep, you close your eyes, and hope that you'll wake up easily in the morning," +
-                "\n and not the a couple of infected tearing at your flesh, until the disease sets in, and you are doomed to their fate.");
+                "\nand not the a couple of infected tearing at your flesh, until the disease sets in, and you are doomed to their fate.");
         System.out.println("\nPress any button to continue.");
         input.nextLine();
 
@@ -361,11 +387,12 @@ public class Chapters {
 
     }
 
+    //Chapter 3 starts here
     public void chapter_3() {
-        Enemy infected1 = new Enemy("Infected",150,10,10,20, bossShouts, deathShouts, 5, 4, 0, 3, 1);
-        Enemy infected2 = new Enemy("Infected",150,10,10,20, bossShouts, deathShouts,7, 6, 0, 2, 2);
-        Enemy boss1 = new Enemy("The Infected Andracs", 250, 20, 20, 30, bossShouts, deathShouts,0, 0, 0, 0, 0);
-        Enemy boss2 = new Enemy("The Infected Karsten",250,20,20,30, bossShouts, deathShouts,0, 0, 0, 0, 0);
+        Enemy infected1 = new Enemy("Infected",150,10,10,20, infectedShouts, deathShouts, 5, 4, 0, 3, 1);
+        Enemy infected2 = new Enemy("Infected",150,10,10,20, infectedShouts, deathShouts,7, 6, 0, 2, 2);
+        Enemy boss1 = new Enemy("The Infected Andracs", 250, 20, 20, 30, boss1Shouts, deathShouts,0, 0, 0, 0, 0);
+        Enemy boss2 = new Enemy("The Infected Karsten",250,20,20,30, boss2Shouts, deathShouts,0, 0, 0, 0, 0);
 
         Battle fight = new Battle(infected1, player);
 
@@ -394,11 +421,12 @@ public class Chapters {
         System.out.println("Now decide!");
         System.out.println("Type \"Rådhuspladsen\" or \"Politigården\" \n");
 
-
+        //This boolean makes sure the while loop can continue, even if the player enters the wrong text
         boolean stop = false;
-
         while (!stop) {
             String choice = input.nextLine().toLowerCase();
+
+            //This if statement controls which path the player wants to take in the story
             if (choice.equals("rådhuspladsen")) {
                 System.out.println("You decided to jog towards Rådhuspladsen, moving cautiously but fast.\n" +
                         "Your weapons are loaded, and you head out, feeling hopeful that today is the day, you finally Escape From Copenhagen.");
@@ -467,7 +495,7 @@ public class Chapters {
                         "   ╚═╝    ╚═════╝  ╚═════╝      ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚═╝");
                 controller.start();
                 stop = true;
-            } else if (input.equals("Politigården")) {
+            } else if (choice.equals("politigården")) {
 
                 System.out.println("You decide to walk to Politigården, and that means you will have to wait for a while longer, till night sets in.\n" +
                         "You use the day to check your gear, get batteries in your night-sight and laser-attachment and to get a bit of shuteye, before the long night.");
@@ -488,47 +516,6 @@ public class Chapters {
     }
 }
 
-/*  //TODO final boss??
-/*
-        System.out.println(
-                "           _     _                                   \n" +
-                "           /\\.--/\\     NUGGGGGGGGH...                   \n" +
-                "           \\_ _  \\//\\                                \n" +
-                "         __/o o`     |   MUST FIND STUDENTS...\n" +
-                "        (/           |                               \n" +
-                "         \\__,        /                               \n" +
-                "        __\\-'       /                                \n" +
-                "   .-'``\\ /`\"-=.-=\"`)                                \n" +
-                " /`  _.-.'          \\                                \n" +
-                " \\_.\"   ,`-._ /    /_\\                               \n" +
-                "       /     /-.._/ |                                \n" +
-                "      |     /    /  |                                \n" +
-                "     ,|    '.__.'   |                                \n" +
-                " _  /  \\     .-\"\".  /                                \n" +
-                "/ \\/   /`-._|     |`                                 \n" +
-                "\\  \\  /     \\     |                                  \n" +
-                " \\   /       \\    |                                  \n" +
-                "  '-'         `.  |                                  \n" +
-                "           .-\"`   \\                                  \n" +
-                "           \\__,.-'`                                  ");
 
-
-
-System.out.println(""+
-        "            ,                                         \n" +
-        "        _,-\"\"-._                                    \n" +
-        "      ,\"        \".                                  \n" +
-        "     /    ,-,  ,\"\\     ENOUGH WITH THE HUMANS..     \n" +
-        "    \"    /   \\ | o|    GRRR..                       \n" +
-        "    \\    `-o-\"  `-',                                \n" +
-        "     `,   _.--'`'--`                                  \n" +
-        "       `--`---'                                       \n" +
-        "         ,' '                                         \n" +
-        "       ./ ,  `,                                       \n" +
-        "       / /     \\                                     \n" +
-        "      (_)))_ _,\"                                     \n" +
-        "         _))))_,                                      \n" +
-        "--------(_,-._)))");
-        fight.turnController(firstEnemy, player);
 
 */

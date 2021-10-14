@@ -3,6 +3,7 @@ package com.company;
 import java.util.Scanner;
 
 public class Controller{
+    //Making input scanner
     Scanner input = new Scanner(System.in);
 
     //Game starts here
@@ -42,4 +43,5 @@ public class Controller{
             }
         }
     }
+
 }

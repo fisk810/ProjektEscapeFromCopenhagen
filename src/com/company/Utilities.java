@@ -2,6 +2,7 @@ package com.company;
 
 public class Utilities {
 
+    //Instance variables
     //Healing
     private int firstAidAmount;
     private int adrenalineSyringeAmount;
@@ -13,12 +14,7 @@ public class Utilities {
     private final int HANDGRENADE = 100;
     private int handgrenadeAmount = 0;
 
-
-    //Default Constructor
-    public Utilities() {
-    }
-
-    //Håndgranat Contructor
+    //Handgrenade Contructor
     public Utilities(int handgrenadeAmount) {
         this.handgrenadeAmount = handgrenadeAmount;
     }
@@ -30,12 +26,14 @@ public class Utilities {
         this.mag = mag;
     }
 
+    //Healing Constructor
     public Utilities(int firstAidAmount, int adrenalineSyringeAmount) {
         this.firstAidAmount = firstAidAmount;
         this.adrenalineSyringeAmount = adrenalineSyringeAmount;
     }
 
-    //Metoder
+    //Methods
+    //firstAidKit gives the player 65 health if their firstAidAmount is more than 0
     public void firstAidKit(Player player) {
 
         if (getFirstAidAmount() >= 1) {
@@ -47,6 +45,7 @@ public class Utilities {
         }
     }
 
+    //adrenalineSyringe gives the player 35 health if their adrenalineSyringeAmount is more than 0
     public void adrenalineSyringe(Player player) {
 
         if (getAdrenalineSyringeAmount() >= 1) {
@@ -76,15 +75,14 @@ public class Utilities {
     public void setAdrenalineSyringeAmount(int adrenalineSyringeAmount) {
         this.adrenalineSyringeAmount = adrenalineSyringeAmount;
     }
+
     public int getWeaponDamageMin() {
         return weaponDamageMin;
     }
 
-
     public int getWeaponDamageMax() {
         return weaponDamageMax;
     }
-
 
     public int getMag() {
         return mag;
@@ -93,6 +91,7 @@ public class Utilities {
     public void setMag(int mag) {
         this.mag = mag;
     }
+
     public int getHANDGRENADE() {
         return HANDGRENADE;
     }
@@ -100,6 +99,7 @@ public class Utilities {
     public int getHandgrenadeAmount() {
         return handgrenadeAmount;
     }
+
     public void setHandgrenadeAmount(int handgrenadeAmount) {
         this.handgrenadeAmount = handgrenadeAmount;
     }
