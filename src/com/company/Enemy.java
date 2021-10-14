@@ -5,7 +5,6 @@ import java.util.Random;
 public class Enemy {
 
     //Instance variables
-    Utilities rewards = new Utilities();
     private String enemyName;
     private int enemyHP;
     private int enemyRage;

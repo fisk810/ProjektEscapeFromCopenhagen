@@ -507,9 +507,88 @@ public class Chapters {
                 System.out.println("\nPress any button to continue.");
                 input.nextLine();
 
+                System.out.println("You stalk out of the armory and head into the city proper.");
+                System.out.println("\nPress any button to continue.");
+                input.nextLine();
+
+                System.out.println("The night-sight sticks to your face, letting you see enough to both walk and fight.\n" +
+                        "The walk through the city goes on rather uneventful, although not exactly quiet,\n" +
+                        "as the terrible sounds of the infected fills the cityscape with nightmarish noise, nighttime making it even more terrifying.");
+                System.out.println("\nPress any button to continue.");
+                input.nextLine();
+
+                System.out.println("As you walk underneath Knippelsbro, you are knocked down as a great force pushes you to the ground.\n" +
+                        "Through your night-sights you are confronted by a terror-inducing visage, its one eye hanging - half eaten - from its socket.");
+                System.out.println("\nPress any button to continue.");
+                input.nextLine();
+
+                fight.turnController(infected1, player);
+
+                System.out.println("A growl from behind a pillar, alerts you to another infected, rushing you,\n" +
+                        "and you must snap your laser-attached weapon towards it.");
+                System.out.println("\nPress any button to continue.");
+                input.nextLine();
+
+                fight.turnController(infected2, player);
+
+                System.out.println("As the last bullet enters the skull of the infected, you instantly rush to your feet,\n" +
+                        "not missing a step as you start running towards Politigården ");
+                System.out.println("\nPress any button to continue.");
+                input.nextLine();
+
+                System.out.println("Arriving at the darkest of night, you quickly rummage through Politigården and find keys for a nearby RIB, lying down near Kalvebod Brygge.\n" +
+                        "You walk out the double doors.");
+                System.out.println("\nPress any button to continue.");
+                input.nextLine();
+
+                System.out.println("You emerge, sweat running all over, and having almost depleted your energy, you really are not ready for what awaits you in the courtyard.");
+                System.out.println("\nPress any button to continue.");
+                input.nextLine();
+
+                System.out.println("In front of you is the most gruesome enemies yet, The Infected Karsten!\n" +
+                        "He roars, meat spilling from his mouth, and whatever he is trying to say is reduced to the garbled words:");
+                System.out.println("\nPress any button to continue.");
+                input.nextLine();
+
+                System.out.println(
+                        "           _     _                                   \n" +
+                        "           /\\.--/\\   MY BOAT...                   \n" +
+                        "           \\_ _  \\//\\    NOKIA RULES...                            \n" +
+                        "         __/o o`     |   MUST FIND STUDENTS...\n" +
+                        "        (/           |                               \n" +
+                        "         \\__,        /                               \n" +
+                        "        __\\-'       /                                \n" +
+                        "   .-'``\\ /`\"-=.-=\"`)                                \n" +
+                        " /`  _.-.'          \\                                \n" +
+                        " \\_.\"   ,`-._ /    /_\\                               \n" +
+                        "       /     /-.._/ |                                \n" +
+                        "      |     /    /  |                                \n" +
+                        "     ,|    '.__.'   |                                \n" +
+                        " _  /  \\     .-\"\".  /                                \n" +
+                        "/ \\/   /`-._|     |`                                 \n" +
+                        "\\  \\  /     \\     |                                  \n" +
+                        " \\   /       \\    |                                  \n" +
+                        "  '-'         `.  |                                  \n" +
+                        "           .-\"`   \\                                  \n" +
+                        "           \\__,.-'`                                  ");
+                System.out.println("\nPress any button to continue.");
+                input.nextLine();
+
+                System.out.println("He then attacks you furiously!");
+
+                fight.turnController(boss2, player);
+
+                System.out.println("You have defeated The Infected Karsten!\n" +
+                        "Congratulations!\n \n" +
+                        "██╗   ██╗ ██████╗ ██╗   ██╗    ██╗    ██╗██╗███╗   ██╗██╗\n" +
+                        "╚██╗ ██╔╝██╔═══██╗██║   ██║    ██║    ██║██║████╗  ██║██║\n" +
+                        " ╚████╔╝ ██║   ██║██║   ██║    ██║ █╗ ██║██║██╔██╗ ██║██║\n" +
+                        "  ╚██╔╝  ██║   ██║██║   ██║    ██║███╗██║██║██║╚██╗██║╚═╝\n" +
+                        "   ██║   ╚██████╔╝╚██████╔╝    ╚███╔███╔╝██║██║ ╚████║██╗\n" +
+                        "   ╚═╝    ╚═════╝  ╚═════╝      ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚═╝");
+                    controller.start();
                 stop = true;
-            }
-            else {
+            } else {
                 System.out.println("You have to decide between either \"Rådhuspladsen\" or \"Politigården\".");
             }
         }
@@ -518,4 +597,4 @@ public class Chapters {
 
 
 
-*/
+
