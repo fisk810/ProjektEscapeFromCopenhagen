@@ -3,6 +3,7 @@
 A story driven game.
 
 
+
 <details close>
 <summary>Billede</summary>
 <br>
@@ -17,3 +18,11 @@ A story driven game.
 ![image](https://user-images.githubusercontent.com/89967398/137308167-36e1e2ff-18cd-4507-bf82-e1c0d19ae613.png)
 </details>
 
+**SoftwareSmeden**
+- [Profile](https://github.com/SoftwareSmeden "SoftwareSmeden")
+
+**fisk810**
+- [Profile](https://github.com/fisk810 "fisk810")
+
+**GodeGamleJacob**
+- [Profile](https://github.com/GodeGamleJacob "GodeGamleJacob")
