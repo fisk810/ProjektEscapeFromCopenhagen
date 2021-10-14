@@ -57,7 +57,6 @@ public class Utilities {
         }
     }
 
-
     //Getters and setters
     public int getFirstAidAmount() {
         return firstAidAmount;

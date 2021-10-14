@@ -26,6 +26,7 @@ public class Player {
     public int getPlayerHP() {
         return playerHP;
     }
+
     public void setPlayerHP(int playerHP) {
         this.playerHP = playerHP;
     }

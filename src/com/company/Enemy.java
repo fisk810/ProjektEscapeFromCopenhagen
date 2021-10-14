@@ -20,6 +20,7 @@ public class Enemy {
     private int aidAmount;
     private int syringeAmount;
 
+    Random random = new Random();
 
     //Constructor
     public Enemy(String enemyName, int enemyHP, int enemyRage, int enemyATKMin, int enemyATKMax, String[] shouts, String[] deathShouts, int mpMags, int coltMags, int grenadeAmount, int aidAmount, int syringeAmount) {
@@ -40,12 +41,12 @@ public class Enemy {
     //These methods get a random shout for the enemy to use. The shout arrays are created in Chapters.java
     public void getRandomShouts(){
         if(enemyHP > 0) {
-            int randomShout = new Random().nextInt(shouts.length);
+            int randomShout = random.nextInt(shouts.length);
             System.out.println(getEnemyName() +": " + shouts[randomShout]);
         }
     }
     public String getRandomDeathShouts(){
-        int randomDeathShout = new Random().nextInt(deathShouts.length);
+        int randomDeathShout = random.nextInt(deathShouts.length);
         return deathShouts[randomDeathShout];
     }
 
@@ -93,6 +94,7 @@ public class Enemy {
     public int getEnemyHP() {
         return enemyHP;
     }
+
     public void setEnemyHP(int enemyHP) {
         this.enemyHP = enemyHP;
     }
@@ -100,6 +102,7 @@ public class Enemy {
     public int getEnemyRage() {
         return enemyRage;
     }
+
     public void setEnemyRage(int enemyRage) {
         this.enemyRage = enemyRage;
     }

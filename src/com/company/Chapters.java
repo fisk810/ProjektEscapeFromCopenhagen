@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Chapters {
     //Creating a player, a controller and a scanner
     Scanner input = new Scanner(System.in);
-    Player player = new Player("", 100, 5, 25);
+    Player player = new Player("Jens", 100, 5, 25);
     Controller controller = new Controller();
 
     //Created arrays with shouts for the enemy to use
@@ -90,8 +90,11 @@ public class Chapters {
                 "Not before the mutation had set in.");
         System.out.println("\nPress any button to continue.");
         input.nextLine();
+
+        //Runs playercreation and sets the players name to the returned value
         String name = playerCreation();
         player.setPlayerName(name);
+
         System.out.println("\nPress any button to continue.");
         input.nextLine();
 

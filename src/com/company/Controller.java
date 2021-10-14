@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Controller{
@@ -28,7 +29,7 @@ public class Controller{
         boolean decide = true;
 
         while (decide) {
-            String playerInput = input.nextLine();
+            String playerInput = input.nextLine().toLowerCase();
             switch (playerInput) {
 
                 case "y" -> {

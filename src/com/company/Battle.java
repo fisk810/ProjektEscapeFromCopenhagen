@@ -41,7 +41,7 @@ public class Battle {
                         ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: \n");
 
         //Player commands
-        while (playerActive) {
+        while(playerActive) {
             String playerInput = input.nextLine();
             switch (playerInput) {
 
@@ -110,16 +110,6 @@ public class Battle {
         }
     }
 
-    //This method takes rewards from a defeated enemy and hands it to the player
-    public void victoryReward() {
-        //Getting rewards from the enemy and giving it to the player
-        player.getMp7A2().setMag(player.getMp7A2().getMag() + enemy.getMpMags());
-        player.getColtM10().setMag(player.getColtM10().getMag() + enemy.getColtMags());
-        player.getHandgrenade().setHandgrenadeAmount((player.getHandgrenade().getHandgrenadeAmount() + enemy.getGrenadeAmount()));
-        player.getHealingKit().setFirstAidAmount(player.getHealingKit().getFirstAidAmount() + enemy.getAidAmount());
-        player.getHealingKit().setAdrenalineSyringeAmount(player.getHealingKit().getAdrenalineSyringeAmount() + enemy.getSyringeAmount());
-    }
-
     //This methods controls the battles turns
     public void turnController(Enemy enemy, Player player) {
         //A while loop that controls whether it is the player or the enemy's turn. The loop stops once the player or the enemy's health
@@ -153,7 +143,6 @@ public class Battle {
             System.out.println("\nThe enemy has been defeated!");
             System.out.println("Enemy overkilled by: " + Math.abs(enemy.getEnemyHP()) + " damage! \n");
             victoryReward();
-            playerActive = true;
         }
         else{
             Controller controller = new Controller();
@@ -178,6 +167,16 @@ public class Battle {
             controller.restart();
 
         }
+    }
+
+    //This method takes rewards from a defeated enemy and hands it to the player
+    public void victoryReward() {
+        //Getting rewards from the enemy and giving it to the player
+        player.getMp7A2().setMag(player.getMp7A2().getMag() + enemy.getMpMags());
+        player.getColtM10().setMag(player.getColtM10().getMag() + enemy.getColtMags());
+        player.getHandgrenade().setHandgrenadeAmount((player.getHandgrenade().getHandgrenadeAmount() + enemy.getGrenadeAmount()));
+        player.getHealingKit().setFirstAidAmount(player.getHealingKit().getFirstAidAmount() + enemy.getAidAmount());
+        player.getHealingKit().setAdrenalineSyringeAmount(player.getHealingKit().getAdrenalineSyringeAmount() + enemy.getSyringeAmount());
     }
 
 }
