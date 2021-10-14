@@ -1,8 +1,8 @@
 # Escape From Copenhagen Game
 
-A story driven game.
-
-
+A story driven game/interactive novel.
+A text-based game, written in JAVA.
+We have used a variety of methods in order to make the game, while trying not to over-extend.
 
 <details close>
 <summary>Billede</summary>
