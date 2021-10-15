@@ -1,8 +1,16 @@
 # Escape From Copenhagen Game
-
 A story driven game/interactive novel.
-A text-based game, written in JAVA.
-We have used a variety of methods in order to make the game, while trying not to over-extend.
+
+
+hvad du vil lave, og hvad du har lavet, og hvordan det kan bruges. 
+Vi vil lave et tekstspil med tur-baseret kampe og et stærkt narrativ. 
+Programmet skal have en spiller- og en fjendeklasse, som skal kunne oprette én spiller og flere fjender.
+Spilleren skal kunne kæmpe mod de oprettet fjender. Dette bliver programmeret i en klasse kaldet Battle.
+Spilleren - og fjenderne - skal have en klasse til genstande, der kan føres over fra kamp til kamp. Denne klasse kaldes Utilities.
+Der skal - indenfor Utilities - kunne gives genstande mellem fjenderne og spilleren.
+Der skal laves en klasse som kan styrer spillets narrativ, hvilket bliver gjort med metoder som repræsenterer kapitler i historien.
+Der skal oprettes et kontrolsystem, der kan bruges til at styre de forskellige Chapter-metoder, både til at køre programmet og til at genstarte/afslutte programmet.
+
 
 <details close>
 <summary>Billede</summary>
