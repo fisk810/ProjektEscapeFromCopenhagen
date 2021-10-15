@@ -392,8 +392,8 @@ public class Chapters {
 
     //Chapter 3 starts here
     public void chapter_3() {
-        Enemy infected1 = new Enemy("Infected",150,10,10,20, infectedShouts, deathShouts, 5, 4, 0, 3, 1);
-        Enemy infected2 = new Enemy("Infected",150,10,10,20, infectedShouts, deathShouts,7, 6, 0, 2, 2);
+        Enemy infected1 = new Enemy("Infected",150,10,10,20, infectedShouts, deathShouts, 5, 4, 0, 5, 1);
+        Enemy infected2 = new Enemy("Infected",150,10,10,20, infectedShouts, deathShouts,7, 6, 0, 4, 2);
         Enemy boss1 = new Enemy("The Infected Andracs", 250, 20, 20, 30, boss1Shouts, deathShouts,0, 0, 0, 0, 0);
         Enemy boss2 = new Enemy("The Infected Karsten",250,20,20,30, boss2Shouts, deathShouts,0, 0, 0, 0, 0);
 
